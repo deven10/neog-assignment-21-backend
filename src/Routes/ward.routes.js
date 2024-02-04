@@ -15,7 +15,6 @@ wardRouter.post("/", async (req, res) => {
   try {
     const body = req.body;
     const ward = await addWard(body);
-    console.log("ward created: ", ward);
     res.status(201).json({ message: "New ward added successfully", ward });
   } catch (e) {
     res.status(500).json({ message: e });

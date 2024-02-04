@@ -15,7 +15,6 @@ patientRouter.post("/", async (req, res) => {
   try {
     const body = req.body;
     const patient = await addPatient(body);
-    console.log("patient created: ", patient);
     res
       .status(201)
       .json({ message: "New patient added successfully", patient });

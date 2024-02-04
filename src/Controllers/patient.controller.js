@@ -6,7 +6,6 @@ async function addPatient(patientDetails) {
   try {
     const newPatient = new Patient(patientDetails);
     const savedPatient = await newPatient.save();
-    console.log("new patient added: ", savedPatient);
     return savedPatient;
   } catch (e) {
     throw e;
@@ -18,7 +17,6 @@ async function addPatient(patientDetails) {
 async function findAllPatients() {
   try {
     const patients = await Patient.find();
-    console.log("all patients: ", patients);
     return patients;
   } catch (e) {
     throw e;
@@ -34,7 +32,6 @@ async function updatePatient(patientId, patientDetails) {
       patientDetails,
       { new: true, runValidators: true }
     );
-    console.log("updatedPatient: ", updatedPatient);
     return updatedPatient;
   } catch (e) {
     throw e;
@@ -46,7 +43,6 @@ async function updatePatient(patientId, patientDetails) {
 async function deletePatient(patientId) {
   try {
     const patient = await Patient.findByIdAndDelete(patientId);
-    console.log("patient deleted: ", patient);
     return patient;
   } catch (e) {
     throw e;
