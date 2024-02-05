@@ -10,6 +10,10 @@ const WardSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
+    patientsRecovered: {
+      type: Number,
+      required: true,
+    },
     specialization: {
       type: String,
       required: true,

@@ -22,6 +22,10 @@ const PatientSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
+    stayDuration: {
+      type: Number,
+      required: true,
+    },
     assignedWard: {
       type: String,
       required: true,
